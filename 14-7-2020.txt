@@ -1,0 +1,398 @@
+CREATING LOCAL REPOSITORY
+
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice
+$ git init
+Initialized empty Git repository in F:/Zensar/DotNetTraining/Practice/.git/
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ code index.html
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ code README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git add .
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+        new file:   index.html
+
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git commit
+index.html  README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git commit -m "add two files index.html and README.md"
+[master (root-commit) aadacab] add two files index.html and README.md
+ 2 files changed, 12 insertions(+)
+ create mode 100644 README.md
+ create mode 100644 index.html
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git log
+commit aadacabbee2678e577a7995a297b5328194c80fb (HEAD -> master)
+Author: Vaibhavee <vaibhavee.singh@zensar.com>
+Date:   Wed Jul 15 08:06:18 2020 +0530
+
+    add two files index.html and README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ code README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git commit -m "modify file README.md"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git add .
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git commit -m "modify file README.md"
+[master 0e339e6] modify file README.md
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git commit
+On branch master
+nothing to commit, working tree clean
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+
+*********************************************************************************************
+
+CREATING NEW BRANCHES
+
+$ git checkout -b branch1
+Switched to a new branch 'branch1'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ ls
+index.html  README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ code new.txt
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ ls
+index.html  new.txt  README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git checkout master
+Switched to branch 'master'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ ls
+index.html  new.txt  README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ code new.txt
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch2)
+$ git checkout -b branch3
+Switched to a new branch 'branch3'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+
+*****************************************************************************
+
+COMPARING 
+
+$ git log
+commit 0e339e6f48360a76f2b0368ccda77f4154e3d05b (HEAD -> branch3, master, branch2, branch1)
+Author: Vaibhavee <vaibhavee.singh@zensar.com>
+Date:   Wed Jul 15 08:09:02 2020 +0530
+
+    modify file README.md
+
+commit aadacabbee2678e577a7995a297b5328194c80fb
+Author: Vaibhavee <vaibhavee.singh@zensar.com>
+Date:   Wed Jul 15 08:06:18 2020 +0530
+
+    add two files index.html and README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git deff aada Oe33
+git: 'deff' is not a git command. See 'git --help'.
+
+The most similar command is
+        diff
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff aada Oe33
+fatal: ambiguous argument 'Oe33': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff aada Oe339e
+fatal: ambiguous argument 'Oe339e': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff aada 0e339e
+diff --git a/README.md b/README.md
+index e0de478..6cb46df 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,3 @@
+ ## this is h2 heading
+-### this is h3 Heading
+\ No newline at end of file
++### this is h3 Heading
++#### this is H4 Heading
+\ No newline at end of file
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch1 branch2
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch1 branch3
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch1 master
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch2 master
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch3 master
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git status
+On branch branch3
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        new.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git add .
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git commit -m "add new.txt"
+[branch3 eb060e4] add new.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.txt
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git diff branch3 master
+diff --git a/new.txt b/new.txt
+deleted file mode 100644
+index 9ce04d6..0000000
+--- a/new.txt
++++ /dev/null
+@@ -1 +0,0 @@
+-some random text here
+\ No newline at end of file
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+
+*****************************************************************************
+
+
+CREATING REMOTE REPOSITORY
+
+$ git remote add origin https://github.com/VaibhaveeSingh/Daily-Practice.git
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git push -u origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 697 bytes | 697.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VaibhaveeSingh/Daily-Practice.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+
+*****************************************************************************
+
+IMPORT CHANGES FROM REMOTE TO LOCAL REPOSITORY
+
+$ git pull https://github.com/VaibhaveeSingh/Daily-Practice.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 717 bytes | 59.00 KiB/s, done.
+From https://github.com/VaibhaveeSingh/Daily-Practice
+ * branch            HEAD       -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git pull https://github.com/VaibhaveeSingh/Daily-Practice.git
+From https://github.com/VaibhaveeSingh/Daily-Practice
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+$ git status
+On branch branch3
+nothing to commit, working tree clean
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch3)
+
+****************************************************************************
+
+CLONE REPOSITORY
+
+
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git branch
+  branch1
+  branch2
+  branch3
+* master
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git clone https://github.com/Dipanjan59173/git-Dipanjan.git
+Cloning into 'git-Dipanjan'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 7 (delta 0), reused 7 (delta 0), pack-reused 0
+Unpacking objects: 100% (7/7), 750 bytes | 25.00 KiB/s, done.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ ls
+git-Dipanjan/  index.html  README.md
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git status
+On branch branch1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        git-Dipanjan/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git add .
+warning: adding embedded git repository: git-Dipanjan
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> git-Dipanjan
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached git-Dipanjan
+hint:
+hint: See "git help submodule" for more information.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git submodule  add .
+repo URL: '.' must be absolute or begin with ./|../
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git submodule  add https://github.com/Dipanjan59173/git-Dipanjan.git
+'git-Dipanjan' already exists in the index
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git add .
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git submodule  add git-Dipanjan/
+repo URL: 'git-Dipanjan/' must be absolute or begin with ./|../
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git commit -m "clone repository"
+[branch1 4a392a8] clone repository
+ 1 file changed, 1 insertion(+)
+ create mode 160000 git-Dipanjan
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (branch1)
+$ git checkout master
+warning: unable to rmdir 'git-Dipanjan': Directory not empty
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+$ git merge branch1
+Updating 0e339e6..4a392a8
+Fast-forward
+ git-Dipanjan | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 160000 git-Dipanjan
+
+HP@DESKTOP-OOV082L MINGW64 /f/Zensar/DotNetTraining/Practice (master)
+
+
+
